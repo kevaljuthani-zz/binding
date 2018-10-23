@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
   <button (click)="onClick($event)">Greet</button>
   {{greetings}}
   <input #myInput type = "text">
-  <button (click) = "logMessage(myInput.value)">Log me</button>
+  <button (click) = "logMessage(myInput.value)">Log me!</button>
   
   `,
   styles: [`
