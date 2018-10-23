@@ -23,7 +23,8 @@ import { Component, OnInit } from '@angular/core';
   <button (click)="onClick($event)">Greet</button>
   {{greetings}}
   <input #myInput type = "text">
-  <button (click) = "logMessage(myInput.value)">Log me!</button>
+  <button (click) = "logMessage(myInput.value)">Log me!</button><br>
+  <input [(ngModel)] = "twoWayBindingText" type = "text"> {{twoWayBindingText}}
   
   `,
   styles: [`
@@ -47,6 +48,7 @@ export class TestComponent implements OnInit {
   public hasError = false;
   public isSpecial = true;
   public greetings="";
+  public twoWayBindingText = "";
 
   public messageClasses = {
     "text-success": !this.hasError,
